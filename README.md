@@ -1,3 +1,25 @@
+This is the Rails Tutorial sample application by Michael Hartle.
+
+My sample app is hosted on [Heroku](https://langenfeld-sample-app.herokuapp.com/).
+
+Implemented Functionality:
+Modeled Users
+User Signup
+User Login
+User Logout
+Sessions
+Authentication
+
+To do:
+Remember Tokens
+Persistent Sessions
+Updating, Showing, and Deleting Users
+Account Activation
+Password Reset
+User Microposts
+Following Users
+
+
 # Ruby on Rails Tutorial sample application
 
 This is the sample application for
