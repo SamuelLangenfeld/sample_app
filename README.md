@@ -9,13 +9,13 @@ User Login
 User Logout
 Sessions
 Authentication
-
-To do:
 Remember Tokens
 Persistent Sessions
 Updating, Showing, and Deleting Users
 Account Activation
 Password Reset
+
+To do:
 User Microposts
 Following Users
 
