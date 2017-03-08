@@ -28,6 +28,6 @@ end
 
 users= User.order(:created_at).take(6)
 50.times do
-  content = Faker::RickAndMorty.quote.truncate(140)
-  users.each {|user| user.microposts.create!(content: content)}
+#  content = Faker::RickAndMorty.quote.truncate(140)
+  users.each {|user| user.microposts.create!(content: Faker::RickAndMorty.quote.truncate(140))}
 end
