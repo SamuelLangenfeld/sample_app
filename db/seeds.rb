@@ -6,17 +6,29 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create!(name:  "Example User",
-             email: "example@railstutorial.org",
-             password:              "foobar",
-             password_confirmation: "foobar",
+User.create!(name:  "Sam Langenfeld",
+             email: "samlangenfeld@gmail.com",
+             password:              "password",
+             password_confirmation: "password",
              admin: true,
              activated: true,
              activated_at: Time.zone.now)
 
-99.times do |n|
-  name  = Faker::Name.name
-  email = "example-#{n+1}@railstutorial.org"
+User.create!(name:  "Example User",
+             email: "example@railstutorial.org",
+             password:              "password",
+             password_confirmation: "password",
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
+
+
+6.times do |n|
+  name  = Faker::RickAndMorty.unique.character
+  email = name.split("")
+  email= email.join("")
+  email = "#{email.gsub(/[^0-9A-Za-z]/, '')}@RickAndMorty.org"
+  puts email
   password = "password"
   User.create!(name:  name,
                email: email,
@@ -26,11 +38,54 @@ User.create!(name:  "Example User",
                activated_at: Time.zone.now)
 end
 
+6.times do |n|
+  name  = Faker::HarryPotter.unique.character
+  email = name.split("")
+  email= email.join("")
+  email = "#{email.gsub(/[^0-9A-Za-z]/, '')}@HarryPotter.org"
+  puts email
+  password = "password"
+  User.create!(name:  name,
+               email: email,
+               password:              password,
+               password_confirmation: password,
+               activated: true,
+               activated_at: Time.zone.now)
+end
+
+6.times do |n|
+  name  = Faker::Friends.unique.character
+  email = name.split("")
+  email= email.join("")
+  email = "#{email.gsub(/[^0-9A-Za-z]/, '')}@Friends.org"
+  puts email
+  password = "password"
+  User.create!(name:  name,
+               email: email,
+               password:              password,
+               password_confirmation: password,
+               activated: true,
+               activated_at: Time.zone.now)
+end
+
+
 #microposts
-users= User.order(:created_at).take(6)
+users= User.order(:created_at).offset(2).take(6)
 50.times do
 #  content = Faker::RickAndMorty.quote.truncate(140)
   users.each {|user| user.microposts.create!(content: Faker::RickAndMorty.quote.truncate(140))}
+end
+
+users= User.order(:created_at).offset(8).take(6)
+50.times do
+#  content = Faker::RickAndMorty.quote.truncate(140)
+  users.each {|user| user.microposts.create!(content: Faker::HarryPotter.quote.truncate(140))}
+end
+
+users= User.order(:created_at).offset(14).take(6)
+50.times do
+#  content = Faker::RickAndMorty.quote.truncate(140)
+  users.each {|user| user.microposts.create!(content: Faker::Friends.quote.truncate(140))}
 end
 
 #Following relationships
