@@ -1,6 +1,7 @@
-This is the Rails Tutorial sample application by Michael Hartle.
+This is the finished Rails Tutorial sample application by Michael Hartle.
+I made a few changes. The most visible one is that the users are populated by random Harry Potter, Rick and Morty, and Friends characters who spout random quotes from their series.
 
-My sample app is hosted on [Heroku](https://langenfeld-sample-app.herokuapp.com/).
+My app is hosted on [Heroku](https://langenfeld-micropost-app.herokuapp.com/).
 
 <b>Implemented Functionality:</b>  
 Modeled Users  
@@ -13,11 +14,10 @@ Remember Tokens
 Persistent Sessions  
 Updating, Showing, and Deleting Users  
 Account Activation  
-Password Reset  
-
-<b>To do:</b>  
+Password Reset
 User Microposts  
-Following Users  
+Following Users    
+
 
 
 # Ruby on Rails Tutorial sample application
